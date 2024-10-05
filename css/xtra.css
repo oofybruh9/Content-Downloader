@@ -40,10 +40,13 @@
 }
 
 .cool-content{
-  float: right;
   float: top;
+  float: right;
+  margin: 10px
+
 }
 
-.coolL{
+
+.tabl{
   width: 50%;
 }
