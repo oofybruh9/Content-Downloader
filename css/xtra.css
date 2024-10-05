@@ -40,10 +40,13 @@
 }
 
 .cool-content{
-  float: top;
+  position: sticky;
   float: right;
-  margin: 10px
+}
 
+.logo {
+  position: sticky;
+  float: right;
 }
 
 
