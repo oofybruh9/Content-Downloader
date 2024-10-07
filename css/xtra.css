@@ -47,6 +47,9 @@
 .logo {
   position: sticky;
   float: right;
+  width: 460px;
+  height: 215px;
+  object-fit: scale-down;
 }
 
 
