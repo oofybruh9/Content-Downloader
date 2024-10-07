@@ -10,14 +10,16 @@ This is `install.sh` for Linux and `installer.exe` for Windows.
 
 These installers will install to your `.emulationstation/cont/` folder.
 
-Due to the installer not knowing what folder is your current theme and for safety when modifying `es_systems.cfg`, you will have to install the theme icons __and__  modify `es_systems.cfg` by yourself.
+Due to the installer not knowing what folder is your current theme and for safety when modifying `es_systems.cfg`, you will have to install the theme icons *__and__*  modify `es_systems.cfg` by yourself.
 
 ## Installing the icons
 
 Get the `icons.zip`, and extract it to your current theme pack.
 
 The file structure should look like this:
-```
+
+``` text
+
 theme/
 ├─ theme name.xml
 ├─ cont/
@@ -27,6 +29,7 @@ theme/
 │  ├─ the above file is only used if you set the ./theme.xml to use it
 ├─ etc./
 
+
 ```
 
 ## Modifying `es_systems.cfg`
@@ -35,6 +38,7 @@ The `es_system.xml` will have to look something like this:
 
 ```xml
 <systemList>
+    <!-- systems up here -->
     <system>
         <name>cont</name>
         <fullname>Content Downloader</fullname>
@@ -44,9 +48,9 @@ The `es_system.xml` will have to look something like this:
         <platform>ignore</platform>
         <theme>cont</theme>
     </system>
+    <!-- systems down here -->
 </systemList>
 ```
-
 
 ## License
 
