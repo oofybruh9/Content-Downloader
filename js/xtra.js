@@ -71,30 +71,5 @@ function myScript(e){
         image.src = "../img/picodrive.gif";
         btn.innerText = "Download PicoDrive";
         txt.innerText = "PicoDrive is a source-available Sega Master System, Sega Game Gear, Sega Genesis/Sega Mega Drive, Sega CD/Sega Mega CD, Sega 32X and Sega Pico emulator. It was originally developed for the UIQ2, before moving onto the GP2X, PSP, and other handheld devices. The most actively developed version was for the GP2X, as well as being the best port, due to higher levels of optimization. PicoDrive is also available as a libretro core for RetroArch.";
-    } else if (e.target.attributes.id.value == 11){
-        const image = document.getElementById('logo');
-        const txt = document.getElementById('um_actually');
-        const btn = document.querySelector('#dl');
-        image.src = "../img/wave.webp";
-        btn.innerText = "Download WAVE";
-        txt.innerText = "The WAVE emulator is a W.I.P. Emulator for Scratch. It's very buggy and unstable. This was jsut to show what you can do with lots of code block in Scratch. I, oofybruh9 have just added this to the list for if you wanted something buggy. (which most of you guys won't even touch) :)";
     }
-}
-
-function downloadEmu(){
-    /*
-    exec = require("child_process").exec;
-
-    //executes my shell script - main.sh when a request is posted to the server
-    exec('sh main.sh', function (err, stdout, stderr) {
-        if (err) handleError();
-
-        //Print stdout/stderr to console
-        console.log(stdout);
-        console.log(stderr);
-    });
-    }
-    this will modify the output box
-    */
-   console.log('works for now...');
 }
