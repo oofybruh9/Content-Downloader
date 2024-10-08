@@ -81,9 +81,8 @@
 						</div>
 						<div class="cool-content" id="cool-content">
 							<img class="logo" id="logo" src="./img/huh.jpg">
-							<p id='um_actually'>Info about emulators. Click on the list to show content and download button</p>
+							<p id='um_actually'>Lorem ipsum dolor sit amet. Non sunt veniam ut beatae numquam est rerum perferendis qui temporibus totam et dolorem velit id mollitia exercitationem. Ut explicabo fugit et provident reiciendis eos mollitia laborum! Ad cupiditate velit qui similique aliquid aut quaerat odio. Qui ipsa expedita aut corrupti voluptatum vel consequuntur rerum ad possimus exercitationem et velit soluta et dolores eligendi.</p>
 							<button type="button" id="dl" onclick="downloadEmu()">Download nothing</button>
-							<!--output box goes here-->
 						</div>
 					</section>
 					<section id="section-2">
@@ -94,40 +93,33 @@
 					</section>
 					<section id="section-3">
 						<div class="mediabox">
-							<img src="img/02.png" alt="img02" />
-							<h3>Theme 1</h3>
-							<p><p>Lorem ipsum dolor sit amet. Ab magnam Quis non nemo impedit est odit ullam ab vitae omnis. Eum nisi illum sed voluptates velit in quas dolorum est voluptatem accusamus eos optio voluptatem. Et quis pariatur est laboriosam nemo id dolore itaque ut soluta exercitationem! </p>
-						</p>
+							<img src="img/t/simple.png" alt="img02" />
+							<h3>Simple</h3>
+							<p>The official EmulationStation theme made by the dev himself. Pretty basic, but gets the job done.</p>
 						</div>
 						<div class="mediabox">
-							<img src="img/06.png" alt="img06" />
-							<h3>Theme 2</h3>
-							<p><p>Lorem ipsum dolor sit amet. Ab magnam Quis non nemo impedit est odit ullam ab vitae omnis. Eum nisi illum sed voluptates velit in quas dolorum est voluptatem accusamus eos optio voluptatem. Et quis pariatur est laboriosam nemo id dolore itaque ut soluta exercitationem! </p>
-						</p>
+							<img src="img/t/carbon.png" alt="img06" />
+							<h3>Carbon</h3>
+							<p>Another simple theme, but this time, it's made by the devs over at RetroPie. Includes most systems, and even Kodi!</p>
 						</div>
 						<div class="mediabox">
-							<img src="img/01.png" alt="img01" />
-							<h3>Theme 3</h3>
-							<p><p>Lorem ipsum dolor sit amet. Ab magnam Quis non nemo impedit est odit ullam ab vitae omnis. Eum nisi illum sed voluptates velit in quas dolorum est voluptatem accusamus eos optio voluptatem. Et quis pariatur est laboriosam nemo id dolore itaque ut soluta exercitationem! </p>
-						</p>
+							<img src="img/t/metapixel.png" alt="img01" />
+							<h3>Metapixel</h3>
+							<p>Simple, simple, simple. This time, it's all Pixelated! Good for giving ES a retro vibe. Comes with info about all systems, and gameplay pictures.</p>
+						</div>
+						<div class="mediabox">
+							<img src="img/t/batocera.png" alt="img01" />
+							<h3>Batocera</h3>
+							<p>ooh, metadata! This is the default theme that Batocera's fork of ES uses. It's like Carbon, but with metadata and the system in Vector art.</p>
 						</div>
 					</section>
 					<section id="section-4">
-						<div class="mediabox">
-							<img src="img/03.png" alt="img03" />
-							<h3>Tomato Cucumber Curd</h3>
-							<p>Chickweed okra pea winter purslane coriander yarrow sweet pepper radish garlic brussels sprout groundnut summer purslane earthnut pea tomato spring onion azuki bean gourd. </p>
-						</div>
-						<div class="mediabox">
-							<img src="img/01.png" alt="img01" />
-							<h3>Mushroom Green</h3>
-							<p>Salsify taro catsear garlic gram celery bitterleaf wattle seed collard greens nori. Grape wattle seed kombu beetroot horseradish carrot squash brussels sprout chard.</p>
-						</div>
-						<div class="mediabox">
-							<img src="img/04.png" alt="img04" />
-							<h3>Swiss Celery Chard</h3>
-							<p>Celery quandong swiss chard chicory earthnut pea potato. Salsify taro catsear garlic gram celery bitterleaf wattle seed collard greens nori. </p>
-						</div>
+						<h2>Settings:</h2>
+						<h3>dark mode</h3>
+						<label class="switch">
+							<input type="checkbox" onclick="dm()" id="dm">
+							<span class="slider round"></span>
+						</label>
 					</section>
 					<section id="section-5">
 						<button class="button" type="button" onclick="execOpen()">Open in Default Browser</button>
@@ -141,10 +133,21 @@
 		<script>
 			new CBPFWTabs( document.getElementById( 'tabs' ) );
 		</script>
-		<script>
+		<script type="text/javascript">
 			function execOpen() {
 				console.log("this works!!!");
 			}
+			function downloadEmu(){
+  				location.replace("../download.html")
+			} 
+			function dm() {
+    		if (document.getElementById('dm').checked) {
+        		document.body.style.backgroundColor = "#000000";
+			} else {
+        		document.body.style.backgroundColor = "#ffffff";
+        	}
+			}
 		</script>
+		<noscript><strong>PLEASE,</strong> enable JavaScript for this to work</noscript>
 	</body>
 </html>
