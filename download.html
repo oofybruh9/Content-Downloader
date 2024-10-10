@@ -14,20 +14,15 @@
             h1{
                 font-family: Arial;
             }
-            .terminal{
-                width:100%;
-                flex-grow : 1;
-            }
-            :root {
-                --size: 1.4;
-                --font: msdos;
-            }
             @font-face {
-                font-family: msdos;
-                src: url("https://cdn.jsdelivr.net/gh/jcubic/static/assets/dos-vga.ttf");
+            font-family: msdos;
+            src: url("https://cdn.jsdelivr.net/gh/jcubic/static/assets/dos-vga.ttf");
             }
+            html{
+                background: #000;
+            }
+
         </style>
-        <h1>Please type <code>install.init</code> to install.</h1>
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -35,10 +30,7 @@
         <![endif]-->
         
         <div id="terminal" class="terminal"></div>
-        <script src="js/dl.js" async defer></script>
-        <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
-        <script src="https://unpkg.com/jquery.terminal/js/jquery.terminal.min.js"></script>
-        <link href="https://unpkg.com/jquery.terminal/css/jquery.terminal.min.css" rel="stylesheet"/>
+        <script data-main="js/dl" type="module" src="node_modules/js-shell-emulator/jsShell.js"></script>
         <noscript><strong>PLEASE,</strong> enable JavaScript for this to work.</noscript>
     </body>
 </html>
