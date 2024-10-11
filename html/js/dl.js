@@ -1,7 +1,23 @@
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
 $('#terminal').terminal({
   install: function(){
     console.log('Starting...');
-    this.echo('Starting installation service')
+    this.echo('Starting installation service');
+    this.echo('\r\nConfirm Installation??????');
+    $.terminal.forms.radio(this, {message: "\nConfirm?", items:{ yes: 1, no: 2}, name: "conf"}).then (conf => {
+      if (conf == "1"){
+        this.echo("\nOkie Dokie! :)");
+        $.terminal.forms.password(this, {message:"\nPassword for sudo", prompt: "password4sudo: ", name: "pwd"}).then(pwd =>{
+          console.log("echo " +pwd+ " | sudo -s apt-get install pgk -y")//temp script
+        })
+      } else {
+        this.echo("Awwwwwww! :(");
+        return 418;
+      }
+    });
   },
   help: function(){
     this.echo('help - prints this message\r\nls - lists fake files\r\ninstall - installs your files\r\nexit - exits to main menu')
@@ -21,3 +37,4 @@ $('#terminal').terminal({
     return true;
   }
 });
+
