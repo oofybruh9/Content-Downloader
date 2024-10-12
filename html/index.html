@@ -146,14 +146,19 @@
                document.write ("Setting Cookies : " + "emu=" + cookievalue );
 			}
 			function execOpen() {
-				console.log("this works!!!");
+				console.log('cool')
+				//await Neutralino.app.restartProcess({ args: '--mode=browser' });
 			}
 			function downloadEmu(){
 				const button = document.getElementById('dl');
 				const label = button.textContent; // or button.innerText
 				console.log(label);
-				WriteCookie(label);
-  				window.location.replace("download.html");
+				if (label == "Download nothing"){
+					alert("You haven't selected a system!!!!")
+				} else {
+					WriteCookie(label);
+  					window.location.replace("download.html");
+				}
 			} 
 			function dm() {
     		if (document.getElementById('dm').checked) {
