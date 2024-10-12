@@ -130,15 +130,30 @@
 		</div>
 		<script src="js/xtra.js"></script>
 		<script src="js/cbpFWTabs.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/3.0.1/js.cookie.min.js"></script>
 		<script>
 			new CBPFWTabs( document.getElementById( 'tabs' ) );
 		</script>
 		<script type="text/javascript">
+			function WriteCookie(val) {
+               var now = new Date();
+               var minutes = 10;
+               now.setTime(now.getTime() + (minutes * 60 * 1000));
+               cookievalue = val;
+
+               document.cookie="emu=" + cookievalue;
+               document.cookie = "expires=" + now.toUTCString() + ";"
+               document.write ("Setting Cookies : " + "emu=" + cookievalue );
+			}
 			function execOpen() {
 				console.log("this works!!!");
 			}
 			function downloadEmu(){
-  				location.replace("download.html")
+				const button = document.getElementById('dl');
+				const label = button.textContent; // or button.innerText
+				console.log(label);
+				WriteCookie(label);
+  				window.location.replace("download.html");
 			} 
 			function dm() {
     		if (document.getElementById('dm').checked) {
