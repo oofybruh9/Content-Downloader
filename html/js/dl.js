@@ -119,7 +119,30 @@ $('#terminal').terminal({
               }
             }
           } else if (newText.trim() == "PPSSPP"){
-            if (os){
+            if (os == "Windows"){
+              this.echo("Sorry, PPSSPP can't be installed because Content Downloader can't know ppsspp's current stable version.");
+              this.echo("Please install it on [[;;;;https://ppsspp.org/download]PPSSPP's official website]");
+            } else if (os == "Linux"){
+              this.echo("cheking if Flatpak is installed...")
+              /*
+              let flatpak = await Neutralino.os.execCommand("flatpak");
+              console.log(`${flatpak.stdOut}`);
+              this.echo(`${flatpak.stdOut}`);
+              */
+              var flatpak = "error djhfbsodgfnkdjsgakjugkdbghsbdjfbkjhdfbj flatpak --help"
+              let Flatpak = flatpak.includes("flatpak --help");
+              if (Flatpak){
+                this.echo("Flatpak found!")
+                this.echo("installing PPSSPP");
+                /*
+                let ppsspp = await Neutralino.os.execCommand("flatpak");
+                console.log(`${ppsspp.stdOut}`);
+                this.echo(`${ppsspp.stdOut}`);
+                */
+              }
+            }
+          } else if (newText.trim() == "Dolphin"){
+            if (os == "Windows"){
               
             }
           }
