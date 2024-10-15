@@ -119,7 +119,9 @@ $('#terminal').terminal({
               }
             }
           } else if (newText.trim() == "PPSSPP"){
-            if (os)
+            if (os){
+              
+            }
           }
         })
       } else {
