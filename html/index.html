@@ -51,6 +51,7 @@
 			<header class="clearfix">
 				<span>Content Downloader <span data-content="cool."></span></span>
 				<h1>Downloads emulators, cores from RetroArch, and themes for EmulationStation without leaving ES</h1>
+				<h2>When using Google Translate, click to the left of the text to load stuff :)</h2>
 			</header>	
 			<div id="tabs" class="tabs">
 				<nav>
@@ -72,18 +73,18 @@
 								<li id="2">Snes9x</li>
 								<li id="3">MAME</li>
 								<li id="4">PPSSPP</li>
-								<li id="5">Dolphin</li>
+								<li id="5">Dolphin_Emulator</li>
 								<li id="6">Mednafen</li>
-								<li id="7">mGBA</li>
+								<li id="7">mGBA-</li>
 								<li id="8">GBE+</li>
-								<li id="9">Kega Fusion</li>
+								<li id="9">Kega_Fusion</li>
 								<li id="10">PicoDrive</li>
 							</ul>
 						</div>
 						<div class="cool-content" id="cool-content">
 							<img class="logo" id="logo" src="./img/huh.jpg">
 							<p id='um_actually'>Lorem ipsum dolor sit amet. Non sunt veniam ut beatae numquam est rerum perferendis qui temporibus totam et dolorem velit id mollitia exercitationem. Ut explicabo fugit et provident reiciendis eos mollitia laborum! Ad cupiditate velit qui similique aliquid aut quaerat odio. Qui ipsa expedita aut corrupti voluptatum vel consequuntur rerum ad possimus exercitationem et velit soluta et dolores eligendi.</p>
-							<button type="button" id="dl" onclick="downloadEmu()">Download nothing</button>
+							<button type="button" id="dl" onclick="downloadEmu()" title="cool">Download nothing</button>
 						</div>
 					</section>
 					<section id="section-2">
@@ -121,6 +122,8 @@
 							<input type="checkbox" onclick="dm()" id="dm">
 							<span class="slider round"></span>
 						</label>
+						<br>
+						<div id="google_translate_element"></div>
 					</section>
 					<section id="section-5">
 						<button class="button" type="button" onclick="execOpen()">Open in Default Browser</button>
@@ -132,6 +135,7 @@
 		<script src="js/xtra.js"></script>
 		<script src="js/cbpFWTabs.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/3.0.1/js.cookie.min.js"></script>
+		<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" type="text/javascript"></script>
 		<script>
 			new CBPFWTabs( document.getElementById( 'tabs' ) );
 		</script>
@@ -167,6 +171,9 @@
 			} else {
         		document.body.style.backgroundColor = "#ffffff";
         	}
+			}
+			function googleTranslateElementInit() {
+  				new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
 			}
 		</script>
 		<noscript><strong>PLEASE,</strong> enable JavaScript for this to work</noscript>
