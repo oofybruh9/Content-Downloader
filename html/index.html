@@ -46,49 +46,48 @@
 		<![endif]-->
 		<script src="https://cdn.jsdelivr.net/npm/jquery"></script>
 	</head>
-	<body>
+	<body onload="translate('en', 'lngtag')">
 		<div class="container">
 			<header class="clearfix">
-				<span>Content Downloader <span data-content="cool."></span></span>
-				<h1>Downloads emulators, cores from RetroArch, and themes for EmulationStation without leaving ES</h1>
-				<h2>When using Google Translate, click to the left of the text to load stuff :)</h2>
+				<span>Content Downloader</span>
+				<h1 lngtag="downloadsRA"></h1>
 			</header>	
 			<div id="tabs" class="tabs">
 				<nav>
 					<ul>
-						<li><a href="#section-1" class="icon-cup"><span>Emulators</span></a></li>
-						<li><a href="#section-2" class="icon-shop"><span>Cores</span></a></li>
-						<li><a href="#section-3" class="icon-truck"><span>Themes</span></a></li>
-						<li><a href="#section-4" class="icon-lab"><span>Settings</span></a></li>
-						<li><a href="#section-5" class="icon-food"><span>Open In Browser</span></a></li>
+						<li><a href="#section-1" class="icon-cup"><span lngtag="emu"></span></a></li>
+						<li><a href="#section-2" class="icon-shop"><span lngtag="cores"></span></a></li>
+						<li><a href="#section-3" class="icon-truck"><span lngtag="themes"></span></a></li>
+						<li><a href="#section-4" class="icon-lab"><span lngtag="settings"></span></a></li>
+						<li><a href="#section-5" class="icon-food"><span lngtag="openBrowser"></span></a></li>
 					</ul>
 				</nav>
 				<div class="content">
 					<section id="section-1">
-						<h2>Cross-platform Emulators:</h2>
-						<h3>Click to learn more!</h3>
+						<h2 lngtag="cross"></h2>
+						<h3 lngtag="learn"></h3>
 						<div id="tabl" class="tabl">
 							<ul id="coolL" class="coolL">
 								<li id="1">RetroArch</li>
 								<li id="2">Snes9x</li>
 								<li id="3">MAME</li>
 								<li id="4">PPSSPP</li>
-								<li id="5">Dolphin_Emulator</li>
+								<li id="5">Dolphin Emulator</li>
 								<li id="6">Mednafen</li>
-								<li id="7">mGBA-</li>
+								<li id="7">mGBA</li>
 								<li id="8">GBE+</li>
-								<li id="9">Kega_Fusion</li>
+								<li id="9">Kega Fusion</li>
 								<li id="10">PicoDrive</li>
 							</ul>
 						</div>
 						<div class="cool-content" id="cool-content">
 							<img class="logo" id="logo" src="./img/huh.jpg">
-							<p id='um_actually'>Lorem ipsum dolor sit amet. Non sunt veniam ut beatae numquam est rerum perferendis qui temporibus totam et dolorem velit id mollitia exercitationem. Ut explicabo fugit et provident reiciendis eos mollitia laborum! Ad cupiditate velit qui similique aliquid aut quaerat odio. Qui ipsa expedita aut corrupti voluptatum vel consequuntur rerum ad possimus exercitationem et velit soluta et dolores eligendi.</p>
-							<button type="button" id="dl" onclick="downloadEmu()" title="cool">Download nothing</button>
+							<p id='um_actually' lngtag="lorem"></p>
+							<button type="button" id="dl" onclick="downloadEmu()" title="cool" lngtag="nothing"></button>
 						</div>
 					</section>
 					<section id="section-2">
-						<h2>Cores for RetroArch:</h2>
+						<h2 lngtag="cor4RA"></h2>
 						<ul>
 							<li>placeholder</li>
 						</ul>
@@ -97,45 +96,44 @@
 						<div class="mediabox">
 							<img src="img/t/simple.png" alt="img02" />
 							<h3>Simple</h3>
-							<p>The official EmulationStation theme made by the dev himself. Pretty basic, but gets the job done.</p>
+							<p lngtag="simple"></p>
 						</div>
 						<div class="mediabox">
 							<img src="img/t/carbon.png" alt="img06" />
 							<h3>Carbon</h3>
-							<p>Another simple theme, but this time, it's made by the devs over at RetroPie. Includes most systems, and even Kodi!</p>
+							<p lngtag="carbon"></p>
 						</div>
 						<div class="mediabox">
 							<img src="img/t/metapixel.png" alt="img01" />
 							<h3>Metapixel</h3>
-							<p>Simple, simple, simple. This time, it's all Pixelated! Good for giving ES a retro vibe. Comes with info about all systems, and gameplay pictures.</p>
+							<p lngtag="metapixel"></p>
 						</div>
 						<div class="mediabox">
 							<img src="img/t/batocera.png" alt="img01" />
 							<h3>Batocera</h3>
-							<p>ooh, metadata! This is the default theme that Batocera's fork of ES uses. It's like Carbon, but with metadata and the system in Vector art.</p>
+							<p lngtag="batocera"></p>
 						</div>
 					</section>
 					<section id="section-4">
-						<h2>Settings:</h2>
-						<h3>dark mode</h3>
+						<h2 lngtag="set"></h2>
+						<h3 lngtag="darkmode"></h3>
 						<label class="switch">
 							<input type="checkbox" onclick="dm()" id="dm">
 							<span class="slider round"></span>
 						</label>
 						<br>
-						<div id="google_translate_element"></div>
+						<div id="translations"></div>
 					</section>
 					<section id="section-5">
-						<button class="button" type="button" onclick="execOpen()">Open in Default Browser</button>
+						<button class="button" type="button" onclick="execOpen()" lngtag="opBr"></button>
 					</section>
 				</div><!-- /content -->
 			</div><!-- /tabs -->
-			<p class="info">THIS IS LICENSED UNDER GPLv3 AND MIT</p>
+			<p class="info" lngtag="license"></p>
 		</div>
 		<script src="js/xtra.js"></script>
 		<script src="js/cbpFWTabs.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/3.0.1/js.cookie.min.js"></script>
-		<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" type="text/javascript"></script>
 		<script>
 			new CBPFWTabs( document.getElementById( 'tabs' ) );
 		</script>
@@ -172,10 +170,8 @@
         		document.body.style.backgroundColor = "#ffffff";
         	}
 			}
-			function googleTranslateElementInit() {
-  				new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
-			}
 		</script>
+		<script src="js/translate.js"></script>
 		<noscript><strong>PLEASE,</strong> enable JavaScript for this to work</noscript>
 	</body>
 </html>

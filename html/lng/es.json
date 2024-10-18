@@ -1,0 +1,26 @@
+{
+    "downloadsRA": "Descarga emuladores, núcleos para RetroArch y temas para EmulationStation sin salir de ES",
+    "emu": "Emuladores",
+    "cores":"Núcleos",
+    "themes":"Temas",
+    "settings":"Ajustes",
+    "openBrowser":"Abrir en Navegador",
+    "cross":"Emuladores multi-plataforma:",
+    "learn":"¡Haz click para aprender más!",
+    "lorem":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "nothing":"Descragar nada",
+
+    "cor4RA":"Núcleos para RetroArch",
+
+    "simple":"La tema oficial de EmulationStation hecho por el programador el mismo. Muy basico, pero hace el trabajo bien.",
+    "carbon":"Otro tema basico, pero esta vez, hecho por los programadores de RetroPie. Incluye mayoría de los sistemas, ¡e incluso Kodi!",
+    "metapixel":"Basico, basico, basico. ¡Esta vez todo está pixelado! Bueno para dar ES una vibra retro. Incluye información de todo sistema, e imagenes de los juegos",
+    "batocera":"¡Ooh, metadatos! Este es la tema predeterminado que usa la bifurcación de ES por Batocera. Es comó Carbon ^ pero con metadatos e imagenes del sistema en graficos Vector.",
+    
+    "set":"Ajustes:",
+    "darkmode":"Modo Oscuro",
+
+    "opBr":"Abrir en Navegador Predeterminado",
+
+    "license":"CONTENT DOWNLOADER ESTÁ LICENSIADO POR EL GPLv3 Y MIT",
+}

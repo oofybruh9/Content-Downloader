@@ -1,0 +1,26 @@
+{
+    "downloadsRA": "Downloads emulators, cores from RetroArch, and themes for EmulationStation without leaving ES",
+    "emu": "Emulators",
+    "cores": "Cores",
+    "themes": "Themes",
+    "settings": "Settings",
+    "openBrowser": "Open in Browser",
+    "cross" : "Cross-platform emulators:",
+    "learn": "Click to learn more!",
+    "lorem": "Lorem ipsum dolor sit amet. Non sunt veniam ut beatae numquam est rerum perferendis qui temporibus totam et dolorem velit id mollitia exercitationem. Ut explicabo fugit et provident reiciendis eos mollitia laborum! Ad cupiditate velit qui similique aliquid aut quaerat odio. Qui ipsa expedita aut corrupti voluptatum vel consequuntur rerum ad possimus exercitationem et velit soluta et dolores eligendi.",
+    "nothing": "Download nothing",
+    
+    "cor4RA":"Cores for RetroArch:",
+
+    "simple": "The official EmulationStation theme made by the dev himself. Pretty basic, but gets the job done.",
+    "carbon": "Another simple theme, but this time, it's made by the devs over at RetroPie. Includes most systems, and even Kodi!",
+    "metapixel": "Simple, simple, simple. This time, it's all Pixelated! Good for giving ES a retro vibe. Comes with info about all systems, and gameplay pictures.",
+    "batocera": "ooh, metadata! This is the default theme that Batocera's fork of ES uses. It's like Carbon, but with metadata and the system in Vector art.",
+
+    "set":"Settings:",
+    "darkmode":"Dark Mode",
+    
+    "opBr":"Open in Default Browser",
+
+    "license":"CONTENT DOWNLOADER IS LICENSED UNDER GPLv3 AND MIT"
+}

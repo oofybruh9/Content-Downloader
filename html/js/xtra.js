@@ -73,3 +73,27 @@ function myScript(e){
         txt.innerText = "PicoDrive is a source-available Sega Master System, Sega Game Gear, Sega Genesis/Sega Mega Drive, Sega CD/Sega Mega CD, Sega 32X and Sega Pico emulator. It was originally developed for the UIQ2, before moving onto the GP2X, PSP, and other handheld devices. The most actively developed version was for the GP2X, as well as being the best port, due to higher levels of optimization. PicoDrive is also available as a libretro core for RetroArch.";
     }
 }
+
+function translate(lng, tagAttr){
+    var translate = new Translate();
+    translate.init(tagAttr, lng);
+    translate.process();
+    if(lng == 'en'){
+      $("#enTranslator").css('color', '#f4623a');
+      $("#khTranslator").css('color', '#212529');
+    } 
+    if(lng == 'kh'){
+      $("#khTranslator").css('color', '#f4623a');
+      $("#enTranslator").css('color', '#212529');
+    }
+}
+$(document).ready(function(){
+  //This is id of HTML element (English) with attribute lng-tag
+  $("#enTranslator").click(function(){
+    translate('en', 'lng-tag');
+  });
+  //This is id of HTML element (Khmer) with attribute lng-tag
+  $("#khTranslator").click(function(){
+    translate('kh', 'lng-tag');
+  });
+});
