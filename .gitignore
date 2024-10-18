@@ -1,0 +1,5 @@
+#ignore this crap
+/bin/
+.tmp/
+.vscode/
+neutralinojs.log
