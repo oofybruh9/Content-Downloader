@@ -29,150 +29,169 @@
 
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-		<title>Content Downloader</title>
-		<meta name="description" content="Downloads emulators, cores from RetroArch, and themes for EmulationStation without leaving ES" />
-		<meta name="keywords" content="content downloader for es" />
-		<meta name="author" content="oofybruh9" />
-		<link rel="shortcut icon" href="../favicon.ico">
-		<link rel="stylesheet" type="text/css" href="css/demo.css" />
-		<link rel="stylesheet" type="text/css" href="css/component.css" />
-		<link rel="stylesheet" type="text/css" href="css/xtra.css" />
-		<!--[if IE]>
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Content Downloader</title>
+	<meta name="description"
+		content="Downloads emulators, cores from RetroArch, and themes for EmulationStation without leaving ES" />
+	<meta name="keywords" content="content downloader for es" />
+	<meta name="author" content="oofybruh9" />
+	<link rel="shortcut icon" href="../favicon.ico">
+	<link rel="stylesheet" type="text/css" href="css/demo.css" />
+	<link rel="stylesheet" type="text/css" href="css/component.css" />
+	<link rel="stylesheet" type="text/css" href="css/xtra.css" />
+	<!--[if IE]>
   		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
-		<script src="https://cdn.jsdelivr.net/npm/jquery"></script>
-	</head>
-	<body onload="translate('en', 'lngtag')">
-		<div class="container">
-			<header class="clearfix">
-				<span>Content Downloader</span>
-				<h1 lngtag="downloadsRA"></h1>
-			</header>	
-			<div id="tabs" class="tabs">
-				<nav>
-					<ul>
-						<li><a href="#section-1" class="icon-cup"><span lngtag="emu"></span></a></li>
-						<li><a href="#section-2" class="icon-shop"><span lngtag="cores"></span></a></li>
-						<li><a href="#section-3" class="icon-truck"><span lngtag="themes"></span></a></li>
-						<li><a href="#section-4" class="icon-lab"><span lngtag="settings"></span></a></li>
-						<li><a href="#section-5" class="icon-food"><span lngtag="openBrowser"></span></a></li>
-					</ul>
-				</nav>
-				<div class="content">
-					<section id="section-1">
-						<h2 lngtag="cross"></h2>
-						<h3 lngtag="learn"></h3>
-						<div id="tabl" class="tabl">
-							<ul id="coolL" class="coolL">
-								<li id="1">RetroArch</li>
-								<li id="2">Snes9x</li>
-								<li id="3">MAME</li>
-								<li id="4">PPSSPP</li>
-								<li id="5">Dolphin Emulator</li>
-								<li id="6">Mednafen</li>
-								<li id="7">mGBA</li>
-								<li id="8">GBE+</li>
-								<li id="9">Kega Fusion</li>
-								<li id="10">PicoDrive</li>
-							</ul>
-						</div>
-						<div class="cool-content" id="cool-content">
-							<img class="logo" id="logo" src="./img/huh.jpg">
-							<p id='um_actually' lngtag="lorem"></p>
-							<button type="button" id="dl" onclick="downloadEmu()" title="cool" lngtag="nothing"></button>
-						</div>
-					</section>
-					<section id="section-2">
-						<h2 lngtag="cor4RA"></h2>
-						<ul>
-							<li>placeholder</li>
-						</ul>
-					</section>
-					<section id="section-3">
-						<div class="mediabox">
-							<img src="img/t/simple.png" alt="img02" />
-							<h3>Simple</h3>
-							<p lngtag="simple"></p>
-						</div>
-						<div class="mediabox">
-							<img src="img/t/carbon.png" alt="img06" />
-							<h3>Carbon</h3>
-							<p lngtag="carbon"></p>
-						</div>
-						<div class="mediabox">
-							<img src="img/t/metapixel.png" alt="img01" />
-							<h3>Metapixel</h3>
-							<p lngtag="metapixel"></p>
-						</div>
-						<div class="mediabox">
-							<img src="img/t/batocera.png" alt="img01" />
-							<h3>Batocera</h3>
-							<p lngtag="batocera"></p>
-						</div>
-					</section>
-					<section id="section-4">
-						<h2 lngtag="set"></h2>
-						<h3 lngtag="darkmode"></h3>
-						<label class="switch">
-							<input type="checkbox" onclick="dm()" id="dm">
-							<span class="slider round"></span>
-						</label>
-						<br>
-						<div id="translations">
-						</div>
-					</section>
-					<section id="section-5">
-						<button class="button" type="button" onclick="execOpen()" lngtag="opBr"></button>
-					</section>
-				</div><!-- /content -->
-			</div><!-- /tabs -->
-			<p class="info" lngtag="license"></p>
-		</div>
-		<script src="js/xtra.js"></script>
-		<script src="js/cbpFWTabs.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/3.0.1/js.cookie.min.js"></script>
-		<script>
-			new CBPFWTabs( document.getElementById( 'tabs' ) );
-		</script>
-		<script type="text/javascript">
-			function WriteCookie(val) {
-               var now = new Date();
-               var minutes = 10;
-               now.setTime(now.getTime() + (minutes * 60 * 1000));
-               cookievalue = val;
+	<script src="https://cdn.jsdelivr.net/npm/jquery"></script>
+</head>
 
-               document.cookie="emu=" + cookievalue;
-               document.cookie = "expires=" + now.toUTCString() + ";"
-               document.write ("Setting Cookies : " + "emu=" + cookievalue );
-			}
-			function execOpen() {
-				console.log('cool')
-				//await Neutralino.app.restartProcess({ args: '--mode=browser' });
-			}
-			function downloadEmu(){
-				const button = document.getElementById('dl');
-				const label = button.textContent; // or button.innerText
-				console.log(label);
-				if (label == "Download nothing"){
-					alert("You haven't selected a system!!!!")
-				} else {
-					WriteCookie(label);
-  					window.location.replace("download.html");
-				}
-			} 
-			function dm() {
-    		if (document.getElementById('dm').checked) {
-        		document.body.style.backgroundColor = "#000000";
+<body onload="translate('en', 'lngtag')">
+	<div class="container">
+		<header class="clearfix">
+			<span>Content Downloader</span>
+			<h1 lngtag="downloadsRA"></h1>
+		</header>
+		<div id="tabs" class="tabs">
+			<nav>
+				<ul>
+					<li><a href="#section-1" class="icon-cup"><span lngtag="emu"></span></a></li>
+					<li><a href="#section-2" class="icon-shop"><span lngtag="cores"></span></a></li>
+					<li><a href="#section-3" class="icon-truck"><span lngtag="themes"></span></a></li>
+					<li><a href="#section-4" class="icon-lab"><span lngtag="settings"></span></a></li>
+					<li><a href="#section-5" class="icon-food"><span lngtag="openBrowser"></span></a></li>
+				</ul>
+			</nav>
+			<div class="content">
+				<section id="section-1">
+					<h2 lngtag="cross"></h2>
+					<h3 lngtag="learn"></h3>
+					<div id="tabl" class="tabl">
+						<ul id="coolL" class="coolL">
+							<li id="1">RetroArch</li>
+							<li id="2">Snes9x</li>
+							<li id="3">MAME</li>
+							<li id="4">PPSSPP</li>
+							<li id="5">Dolphin Emulator</li>
+							<li id="6">Mednafen</li>
+							<li id="7">mGBA</li>
+							<li id="8">GBE+</li>
+							<li id="9">Kega Fusion</li>
+							<li id="10">PicoDrive</li>
+						</ul>
+					</div>
+					<div class="cool-content" id="cool-content">
+						<img class="logo" id="logo" src="./img/huh.jpg">
+						<p id='um_actually' lngtag="lorem"></p>
+						<button type="button" id="dl" onclick="downloadEmu()" title="cool" lngtag="nothing"></button>
+					</div>
+				</section>
+				<section id="section-2">
+					<h2 lngtag="cor4RA"></h2>
+					<ul>
+						<li>placeholder</li>
+					</ul>
+				</section>
+				<section id="section-3">
+					<div class="mediabox">
+						<img src="img/t/simple.png" alt="img02" />
+						<h3>Simple</h3>
+						<p lngtag="simple"></p>
+					</div>
+					<div class="mediabox">
+						<img src="img/t/carbon.png" alt="img06" />
+						<h3>Carbon</h3>
+						<p lngtag="carbon"></p>
+					</div>
+					<div class="mediabox">
+						<img src="img/t/metapixel.png" alt="img01" />
+						<h3>Metapixel</h3>
+						<p lngtag="metapixel"></p>
+					</div>
+					<div class="mediabox">
+						<img src="img/t/batocera.png" alt="img01" />
+						<h3>Batocera</h3>
+						<p lngtag="batocera"></p>
+					</div>
+				</section>
+				<section id="section-4">
+					<h2 lngtag="set"></h2>
+					<h3 lngtag="darkmode"></h3>
+					<label class="switch">
+						<input type="checkbox" onclick="dm()" id="dm">
+						<span class="slider round"></span>
+					</label>
+					<br><br><br>
+					<div id="translations">
+						<select id="language">
+							<option value="en">English</option>
+							<option value="es">Español</option>
+						</select>
+					</div>
+					<h1>other settings</h1>
+				</section>
+				<section id="section-5">
+					<button class="button" type="button" onclick="execOpen()" lngtag="opBr"></button>
+				</section>
+			</div><!-- /content -->
+		</div><!-- /tabs -->
+		<p class="info" lngtag="license"></p>
+	</div>
+	<script src="js/neutralino.js"></script>
+	<script src="js/xtra.js"></script>
+	<script src="js/cbpFWTabs.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/3.0.1/js.cookie.min.js"></script>
+	<script>
+		new CBPFWTabs(document.getElementById('tabs'));
+	</script>
+
+	<script type="text/javascript">
+		function WriteCookie(val) {
+			var now = new Date();
+			var minutes = 10;
+			now.setTime(now.getTime() + (minutes * 60 * 1000));
+			cookievalue = val;
+
+			document.cookie = "emu=" + cookievalue;
+			document.cookie = "expires=" + now.toUTCString() + ";"
+			document.write("Setting Cookies : " + "emu=" + cookievalue);
+		}
+
+		function downloadEmu() {
+			const button = document.getElementById('dl');
+			const label = button.textContent; // or button.innerText
+			console.log(label);
+			if (label == "Download nothing") {
+				alert("You haven't selected a system!!!!")
 			} else {
-        		document.body.style.backgroundColor = "#ffffff";
-        	}
+				WriteCookie(label);
+				window.location.replace("download.html");
 			}
-		</script>
-		<script src="js/translate.js"></script>
-		<noscript><strong>PLEASE,</strong> enable JavaScript for this to work</noscript>
-	</body>
+		}
+
+		function dm() {
+			if (document.getElementById('dm').checked) {
+				document.body.style.backgroundColor = "#000000";
+			} else {
+				document.body.style.backgroundColor = "#ffffff";
+			}
+		}
+
+		document.getElementById("language").onchange = changeListener;
+
+		function changeListener() {
+			var value = this.value
+			console.log(value);
+
+			translate(value, 'lngtag')
+
+		}
+	</script>
+	<script src="js/translate.js"></script>
+	<noscript><strong>PLEASE,</strong> enable JavaScript for this to work</noscript>
+</body>
+
 </html>

@@ -97,3 +97,7 @@ $(document).ready(function(){
     translate('kh', 'lng-tag');
   });
 });
+
+async function execOpen() {
+    await Neutralino.app.restartProcess({ args: '--mode=browser' });
+}
